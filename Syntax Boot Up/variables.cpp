@@ -43,4 +43,47 @@ int main()
     cout << text[last_char_index] << endl;
 
     // string_identifier.find('substring') returns the first index of a search
+
+    // Operators - Once introduced to variables and constants, we can begin to operate with them by using operator
+    int aa, b;                                 // aa = b = ?, this is typically stored in memory as 32 bits whgich is 4 bytes
+    cout << sizeof(aa) << " in bytes" << endl; // 4 bytes right now
+    aa = 10;                                   // a:10, b:?
+    b = 4;                                     // a:10, b:4
+    aa = b;                                    // a:4,  b:4
+    b = 7;                                     // a:4,  b:7
+    // operations are performed from right to left
+    int xx = 11 % 3;
+    cout << sizeof(xx) << " in bytes" << endl; // also stored as 4 bytes or 32 bits
+
+    // C++ does have access to the incremement and decrement operators ->
+    //++x, x+=1, and x = x + 1 all have the same effect
+
+    /* Difference between ++x and x++
+    ++x means the increment occurs prior to its usage in the expression
+    x++ means the increment occurs after its usage in the expression
+    */
+
+    int test_1 = 5;
+    int test_1_a = ++test_1;
+    cout << "test_1_a: " << test_1_a << endl; // 6
+
+    int test_2 = 5;
+    int test_2_a = test_2++;
+    cout << "test_2_a: " << test_2_a << endl; // 5
+
+    // Comparing non - fundamental data types like strings
+    string s_1 = "apple";
+    string s_2 = "bannnana";
+    if (s_1 < s_2)
+    {
+        cout << s_1 << "comes before " << s_2 << endl;
+    } // these operations compare their aschii values
+
+    // Ternary Operators
+    // The conditional operator evaluates an expression, returning one value if that expression evaluates to true, and a different one if the expression is false
+
+    int c = (a > b) ? a : b;
+    cout << c;
+
+    return 0;
 }
