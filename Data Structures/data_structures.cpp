@@ -42,6 +42,12 @@ int main() {
     cout << "And yours is:\n ";
     printmovie (yours);
 
+    //Like any other type, structures can be pointed to by its own type of pointers:
+    movies_t amovie;
+    movies_t * pmovie;
+    pmovie = &amovie;
+
+
 
 
     return 0;
